@@ -1,0 +1,167 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+main div.disabled {
+    display: none;
+}
+
+/* Back to home */
+.backtohome {
+    position: absolute;
+    padding: 3px 5px;
+    bottom: 0;
+    background-color: #007cc4;
+    color: #fff;
+}
+
+.backtohome h2 {
+    font-size: 0.9rem;
+}
+
+.backtohome:hover {
+    background-color: #fff;
+    color: #007cc4;
+}
+
+/* main styles */
+main {
+    height: 100vh;
+    width: 100%;
+    background-color: #f1f1f1;
+
+    /* FLEX */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* choice mode */
+main .square {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 80%;
+    height: 40%;
+    border-radius: 10%;
+    box-shadow: 0px 2px 5px 6px #ccc;
+
+
+    /* FLEX */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .square:hover {
+    cursor: pointer;
+}
+
+main .square h2 {
+    color: #fff;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+main .bmi {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)), url(../img/weight.png);
+}
+
+main .calories {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)), url(../img/diet.png);
+}
+
+/* container BMI and Calories */
+main .container {
+    width: 80%;
+    height: 80%;
+    background-color: rgba(175, 175, 175, 0.2);
+    box-shadow: 0px 2px 5px 3px #727272;
+}
+
+/* Check BMI styles */
+main .check-BMI {
+    position: relative;
+}
+
+main .check-BMI form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main .check-BMI form h2,
+main .check-BMI form label,
+main .check-BMI form input {
+    margin: 3px 0;
+}
+
+main .check-BMI form span::after {
+    content: "kg";
+}
+
+main .check-BMI form span:nth-of-type(2)::after {
+    content: "cm";
+}
+
+main .check-BMI form button {
+    display: block;
+    padding: 5px 20px;
+    margin: 20px auto;
+    background-color: #007cc4;
+    color: #fff;
+    border: none;
+    border-radius: 10%;
+}
+
+/* result */
+main .check-BMI .result {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 15%;
+    color: #fff;
+    text-align: center;
+}
+
+/* Check calories */
+main .check-calories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+main .check-calories div {
+    margin: 5px 0;
+}
+
+main .check-calories div h2 {
+    font-size: 1.2rem;
+}
+
+main .check-calories .activity select {
+    width: 100%;
+}
+
+main .check-calories .calculate {
+    display: block;
+    padding: 5px 20px;
+    margin-top: 10px;
+    background-color: #007cc4;
+    color: #fff;
+    border: none;
+    border-radius: 10%;
+}
+
+main .check-calories .result h2 {
+    margin-top: 10px;
+}

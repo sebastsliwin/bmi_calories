@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Healthy</title>
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main>
+        <!-- Choice mode -->
+        <div class="bmi square">
+            <h2>Sprawdź BMI</h2>
+        </div>
+        <div class="calories square">
+            <h2>Oblicz kalorie</h2>
+        </div>
+
+        <!-- Check BMI -->
+        <div class="check-BMI container disabled">
+            <form action="">
+                <h2>Płeć:</h2>
+                <label for="woman">K<input type="radio" name="gender" id="woman" value="woman"></label>
+                <label for="man">M<input type="radio" name="gender" id="man" value="man"></label>
+                <h2>Waga:</h2>
+                <span><input type="text" id="weight"></span>
+                <h2>Wzrost:</h2>
+                <span><input type="text" id="growth"></span>
+                <button class="btn-check">Sprawdź</button>
+            </form>
+            <div class="result">
+                <h1></h1>
+            </div>
+            <div class="backtohome">
+                <h2>Powrót</h2>
+            </div>
+        </div>
+
+        <!-- Check Calories -->
+        <div class="check-calories container disabled">
+            <div class="gender">
+                <h2>Płeć</h2>
+                <button class="woman">Kobieta</button>
+                <button class="man">Mężczyzna</button>
+            </div>
+            <div class="weight">
+                <h2>Waga</h2>
+                <input type="text" name="weight-bmr">
+            </div>
+            <div class="growth">
+                <h2>Wzrost</h2>
+                <input type="text" name="growth-bmr">
+            </div>
+            <div class="age">
+                <h2>Wiek</h2>
+                <input type="text" name="age">
+            </div>
+            <div class="activity">
+                <h2>Aktywność fizyczna</h2>
+                <select name="choice-activity" id="choice-activity">
+                    <option value="">Wybierz rodzaj aktywności</option>
+                    <option value="1.2">Znikoma (brak ćwiczeń)</option>
+                    <option value="1.35">Bardzo mała (ćwiczenia raz na tydzień)</option>
+                    <option value="1.55">Umiarkowana (Ćwiczenia dwa razy w tygodniu)</option>
+                    <option value="1.75">Duża (Dość ciężki trening kilka razy w tygodniu)</option>
+                    <option value="2">Bardzo duża (Przynajmniej cztery ciężkie treningi w tygodniu)</option>
+                </select>
+            </div>
+            <div class="plan">
+                <h2>Planuje</h2>
+                <select name="choice-plan" id="choice-plan">
+                    <option value="">Wybierz co chcesz osiągnąć</option>
+                    <option value="increase">Chce przytyć</option>
+                    <option value="maintain">Chce utrzymać wagę</option>
+                    <option value="decrease">Chce schudnąć</option>
+                </select>
+            </div>
+            <button class="calculate">Oblicz</button>
+            <div class="result">
+                <h2 class="calories-result">Kalorii</h2>
+            </div>
+            <div class="backtohome">
+                <h2>Powrót</h2>
+            </div>
+        </div>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
