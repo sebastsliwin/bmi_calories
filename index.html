@@ -24,13 +24,10 @@
         <!-- Check BMI -->
         <div class="check-BMI container disabled">
             <form action="">
-                <h2>Płeć:</h2>
-                <label for="woman">K<input type="radio" name="gender" id="woman" value="woman"></label>
-                <label for="man">M<input type="radio" name="gender" id="man" value="man"></label>
                 <h2>Waga:</h2>
-                <span><input type="text" id="weight"></span>
+                <span><input type="number" id="weight"></span>
                 <h2>Wzrost:</h2>
-                <span><input type="text" id="growth"></span>
+                <span><input type="number" id="growth"></span>
                 <button class="btn-check">Sprawdź</button>
             </form>
             <div class="result">
@@ -45,20 +42,20 @@
         <div class="check-calories container disabled">
             <div class="gender">
                 <h2>Płeć</h2>
-                <button class="woman">Kobieta</button>
-                <button class="man">Mężczyzna</button>
+                <div class="choice-gender" data-option="woman">Kobieta</div>
+                <div class="choice-gender" data-option="man">Mężczyzna</div>
             </div>
             <div class="weight">
                 <h2>Waga</h2>
-                <input type="text" name="weight-bmr">
+                <input type="text" name="weight-bmr" id="weight-bmr">
             </div>
             <div class="growth">
                 <h2>Wzrost</h2>
-                <input type="text" name="growth-bmr">
+                <input type="text" name="growth-bmr" id="growth-bmr">
             </div>
             <div class="age">
                 <h2>Wiek</h2>
-                <input type="text" name="age">
+                <input type="text" name="age" id="age">
             </div>
             <div class="activity">
                 <h2>Aktywność fizyczna</h2>
@@ -82,7 +79,7 @@
             </div>
             <button class="calculate">Oblicz</button>
             <div class="result">
-                <h2 class="calories-result">Kalorii</h2>
+                <h2 class="calories-result"></h2>
             </div>
             <div class="backtohome">
                 <h2>Powrót</h2>

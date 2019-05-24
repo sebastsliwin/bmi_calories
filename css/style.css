@@ -11,9 +11,11 @@ main div.disabled {
 }
 
 /* Back to home */
-.backtohome {
+main .container .backtohome {
     position: absolute;
     padding: 3px 5px;
+    margin: 0;
+    left: 0;
     bottom: 0;
     background-color: #007cc4;
     color: #fff;
@@ -58,8 +60,20 @@ main .square {
     align-items: center;
 }
 
+@media (min-width: 768px) {
+    main {
+        justify-content: space-around;
+    }
+
+    main .square {
+        flex-basis: 45%;
+        height: 60%;
+    }
+}
+
 main .square:hover {
     cursor: pointer;
+    transform: scale(1.05);
 }
 
 main .square h2 {
@@ -103,6 +117,20 @@ main .check-BMI form input {
     margin: 3px 0;
 }
 
+@media (min-width: 768px) {
+
+    main .check-BMI form h2,
+    main .check-BMI form label {
+        font-size: 1.9rem;
+    }
+
+    main .check-BMI form span input {
+        margin: 30px 0;
+        height: 30px;
+        width: 120px;
+    }
+}
+
 main .check-BMI form span::after {
     content: "kg";
 }
@@ -114,7 +142,7 @@ main .check-BMI form span:nth-of-type(2)::after {
 main .check-BMI form button {
     display: block;
     padding: 5px 20px;
-    margin: 20px auto;
+    margin: 5px auto 30px auto;
     background-color: #007cc4;
     color: #fff;
     border: none;
@@ -132,20 +160,50 @@ main .check-BMI .result {
     text-align: center;
 }
 
+@media (min-width: 480px) {
+    main .check-BMI .result {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 768px) {
+    main .check-BMI .result {
+        font-size: 2rem;
+    }
+}
+
 /* Check calories */
 main .check-calories {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
 
+main .check-calories .gender .choice-gender {
+    padding: 5px 10px;
+    border-radius: 10%;
+    background-color: #dadada;
+}
+
 main .check-calories div {
-    margin: 5px 0;
+    margin: 3px 0;
 }
 
 main .check-calories div h2 {
     font-size: 1.2rem;
+}
+
+@media (min-width: 768px) {
+    main .check-calories div h2 {
+        font-size: 1.5rem;
+    }
+
+    main .check-calories div input {
+        height: 25px;
+        width: 120px;
+    }
 }
 
 main .check-calories .activity select {
@@ -162,6 +220,17 @@ main .check-calories .calculate {
     border-radius: 10%;
 }
 
+@media (min-width: 768px) {
+    main .check-calories .calculate {
+        margin-bottom: 25px;
+        font-size: 1rem;
+    }
+}
+
 main .check-calories .result h2 {
     margin-top: 10px;
+}
+
+main .check-calories .backtohome h2 {
+    font-size: 0.9rem;
 }
